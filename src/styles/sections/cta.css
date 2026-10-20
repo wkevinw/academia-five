@@ -1,0 +1,49 @@
+.cta-banner { padding-block: var(--section-y) 0; background: linear-gradient(var(--white) 0 50%, var(--bg-soft) 50%); }
+.cta-banner__box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem 3rem;
+  padding: clamp(2.5rem, 2rem + 4vw, 5rem);
+  border-radius: var(--radius-lg);
+  background:
+    repeating-linear-gradient(-60deg, rgb(255 255 255 / 0.08) 0 2px, transparent 2px 18px),
+    linear-gradient(120deg, var(--orange), #ff8a3d);
+  color: var(--ink);
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 30px 60px -30px var(--orange-glow);
+}
+.cta-banner__numeral {
+  position: absolute;
+  right: 28%;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(16rem, 30vw, 30rem);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 0.8;
+  color: rgb(18 19 22 / 0.07);
+  user-select: none;
+}
+.cta-banner__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 2rem + 5vw, 6rem);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+.cta-banner__text { max-width: 46ch; margin-top: 1rem; font-size: var(--fs-lead); font-weight: 500; }
+.cta-banner__actions { display: flex; flex-direction: column; gap: 0.85rem; }
+.cta-banner .btn--light { --btn-fg: var(--ink); --btn-bd: var(--ink); }
+.cta-banner .btn--light:hover { --btn-bg: var(--ink); --btn-fg: var(--white); }
+
+@media (max-width: 860px) {
+  .cta-banner__box { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; }
+  .cta-banner__numeral { right: -5%; }
+  .cta-banner__actions .btn { width: 100%; }
+}

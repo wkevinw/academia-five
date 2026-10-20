@@ -1,0 +1,82 @@
+.site-footer {
+  padding-top: clamp(4rem, 3rem + 3vw, 6rem);
+  background: var(--ink);
+  color: var(--muted-light);
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+.footer__tagline { margin: 1.25rem 0 1.5rem; max-width: 30ch; }
+.footer__muted { font-size: 0.92rem; }
+.footer__title {
+  margin-bottom: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.footer__col ul { display: grid; gap: 0.6rem; }
+.footer__col a { transition: color 0.2s; }
+.footer__col a:hover { color: var(--orange); }
+.footer__cta { margin-top: 1.5rem; }
+
+.social { display: flex; gap: 0.6rem; }
+.social a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+  color: var(--white);
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+.social a:hover { background: var(--orange); border-color: var(--orange); color: var(--ink); }
+.social .icon { width: 1.25rem; height: 1.25rem; }
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.5rem calc(1.5rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line-dark);
+  font-size: 0.9rem;
+}
+.footer__top:hover { color: var(--orange); }
+
+/* Botão flutuante de WhatsApp */
+.float-wa {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--ink);
+  box-shadow: 0 14px 30px -10px rgb(18 19 22 / 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.3s, transform 0.4s var(--ease), visibility 0s 0.4s;
+}
+.float-wa.is-visible { opacity: 1; visibility: visible; transform: none; transition: opacity 0.3s, transform 0.4s var(--ease); }
+.float-wa:hover { transform: scale(1.06); }
+.float-wa .icon { width: 28px; height: 28px; }
+.no-scroll .float-wa { opacity: 0; visibility: hidden; }
+
+@media (max-width: 1023.98px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .footer__grid { grid-template-columns: 1fr; }
+}

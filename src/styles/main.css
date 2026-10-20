@@ -1,0 +1,13 @@
+/* Ponto de entrada dos estilos (o Vite junta tudo em um único arquivo no build) */
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
+@import './sections/header.css';
+@import './sections/hero.css';
+@import './sections/about.css';
+@import './sections/plans.css';
+@import './sections/modalities.css';
+@import './sections/facilities.css';
+@import './sections/cta.css';
+@import './sections/contact.css';
+@import './sections/footer.css';

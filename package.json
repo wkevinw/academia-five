@@ -1,0 +1,15 @@
+{
+  "name": "academia-five",
+  "version": "0.1.0",
+  "description": "Landing page institucional da Academia Five",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.4.4"
+  },
+  "type": "module",
+  "private": true
+}
