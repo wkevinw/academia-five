@@ -34,7 +34,7 @@ export function initNav() {
       toggle.focus();
     }
   });
-  window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => e.matches && setOpen(false));
+  window.matchMedia('(min-width: 1180px)').addEventListener('change', (e) => e.matches && setOpen(false));
 
   // Link ativo conforme a seção visível
   const links = [...nav.querySelectorAll('.nav__link')];

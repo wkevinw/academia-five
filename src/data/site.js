@@ -88,6 +88,7 @@ export const nav = [
   { label: 'Planos', href: '#planos' },
   { label: 'Modalidades', href: '#modalidades' },
   { label: 'Estrutura', href: '#estrutura' },
+  { label: 'Unidades', href: '#unidades' },
   { label: 'Contato', href: '#contato' },
 ];
 
@@ -193,6 +194,66 @@ export const facilities = {
     { label: 'Espaço funcional', image: '', size: '' },
     { label: 'Recepção', image: '', size: '' },
     { label: 'Ambiente interno', image: '', size: 'full' },
+  ],
+};
+
+/**
+ * UNIDADES. Para adicionar, remover ou editar uma unidade, altere só esta lista.
+ * Textos entre [colchetes] são PLACEHOLDERS: troque pelos dados reais.
+ *
+ * - status: 'open' (em funcionamento) | 'soon' (em implantação)
+ * - image: foto da fachada, ex.: '/images/unidade-01.jpg' (1600 x 1000 px, horizontal)
+ * - mapsUrl: link do Google Maps da unidade. Vazio = botão "Ver localização" desativado.
+ * - cta: destino do botão "Conhecer unidade" (mesmo formato de `ctas`)
+ * - Unidade 'soon': se o endereço ainda não puder ser divulgado, deixe
+ *   `address` vazio e preencha só `region` (bairro/região).
+ */
+export const units = {
+  eyebrow: 'Unidades',
+  title: 'Encontre a Five [mais perto de você.]',
+  subtitle: 'Escolha sua unidade e venha fazer parte da Academia Five.',
+  items: [
+    {
+      label: 'Unidade 01',
+      status: 'open',
+      name: '[Nome da unidade 01]',
+      address: '[Rua/Avenida, número]',
+      neighborhood: '[Bairro]',
+      city: '[Cidade]',
+      state: 'MG',
+      hours: '[Horário de funcionamento]',
+      image: '',
+      mapsUrl: '',
+      cta: { label: 'Conhecer unidade', href: 'whatsapp', message: 'Olá! Quero conhecer a Unidade 01 da Academia Five.' },
+    },
+    {
+      label: 'Unidade 02',
+      status: 'open',
+      name: '[Nome da unidade 02]',
+      address: '[Rua/Avenida, número]',
+      neighborhood: '[Bairro]',
+      city: '[Cidade]',
+      state: 'MG',
+      hours: '[Horário de funcionamento]',
+      image: '',
+      mapsUrl: '',
+      cta: { label: 'Conhecer unidade', href: 'whatsapp', message: 'Olá! Quero conhecer a Unidade 02 da Academia Five.' },
+    },
+    {
+      label: 'Em breve',
+      status: 'soon',
+      badge: 'Nova Five',
+      name: '[Nome da nova unidade]',
+      headline: 'Uma nova Five está chegando.',
+      text: 'Estamos preparando mais um espaço para você treinar, evoluir e superar seus limites.',
+      address: '',
+      region: '[Região/Bairro da nova unidade]',
+      city: '[Cidade]',
+      state: 'MG',
+      image: '', // foto futura da fachada ou imagem da obra
+      mapsUrl: '',
+      cta: { label: 'Quero saber quando inaugurar', href: 'whatsapp', message: 'Olá! Quero ser avisado(a) quando a nova unidade da Academia Five inaugurar.' },
+    },
   ],
 };
 

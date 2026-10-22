@@ -24,6 +24,7 @@ O conteúdo de `dist/` pode ser hospedado em qualquer serviço de site estático
 | Planos (nomes, valores, benefícios, destaque) | `src/data/site.js` → `plans` |
 | Modalidades | `src/data/site.js` → `modalities` |
 | Fotos da estrutura | `src/data/site.js` → `facilities` |
+| Unidades (nome, endereço, bairro, horário, foto da fachada, link do Google Maps, status) | `src/data/site.js` → `units` |
 | Título/descrição para o Google | `src/data/site.js` → `seo` |
 | Cores, fontes, espaçamentos | `src/styles/tokens.css` |
 
@@ -52,8 +53,15 @@ Use JPG ou WebP com até ~300 KB cada (o banner pode ter até ~400 KB).
 | Estrutura, bloco alto (`size: 'tall'`) | 800 × 1300 px | retrato | |
 | Estrutura, blocos pequenos (`size: ''`) | 800 × 640 px | 5:4 | |
 | Estrutura, faixa inteira (`size: 'full'`) | 2400 × 600 px | 4:1 panorâmica | No celular é recortada no centro |
+| Fachada das unidades (`units.items[].image`) | 1600 × 1000 px | 16:10 paisagem | Fachada centralizada; o topo recebe a etiqueta "Unidade 01" |
 | Compartilhamento em redes (`seo.ogImage`) | 1200 × 630 px | | Imagem que aparece ao enviar o link no WhatsApp |
 | Logo (`brand.logo`) | SVG, ou PNG com fundo transparente e 400 px+ de largura | | Exibida com 44 px de altura no topo |
+
+### Unidades
+
+Cada unidade tem `status: 'open'` (em funcionamento) ou `status: 'soon'` (em implantação, com selo "Nova Five").
+Sem `mapsUrl`, o botão "Ver localização" aparece desativado. Na unidade em implantação, deixe `address` vazio
+para mostrar só a região/bairro (`region`). No celular e no tablet os cards viram um carrossel horizontal.
 
 ### WhatsApp
 

@@ -11,6 +11,7 @@ import { About } from './components/About.js';
 import { Plans } from './components/Plans.js';
 import { Modalities } from './components/Modalities.js';
 import { Facilities } from './components/Facilities.js';
+import { Units } from './components/Units.js';
 import { CtaBanner } from './components/CtaBanner.js';
 import { Contact } from './components/Contact.js';
 import { Footer } from './components/Footer.js';
@@ -55,6 +56,7 @@ export function renderBody() {
     Plans(),
     Modalities(),
     Facilities(),
+    Units(),
     CtaBanner(),
     Contact(),
     `</main>`,
