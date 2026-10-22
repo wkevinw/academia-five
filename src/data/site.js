@@ -88,6 +88,7 @@ export const nav = [
   { label: 'Planos', href: '#planos' },
   { label: 'Modalidades', href: '#modalidades' },
   { label: 'Estrutura', href: '#estrutura' },
+  { label: 'Unidades', href: '#unidades' },
   { label: 'Contato', href: '#contato' },
 ];
 

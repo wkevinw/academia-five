@@ -63,7 +63,7 @@
 
 .nav-toggle { display: none; }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 1179.98px) {
   .nav-toggle {
     position: relative;
     z-index: 2;
