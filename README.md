@@ -12,7 +12,10 @@ npm run build    # gera a versão final em dist/
 npm run preview  # testa a versão final localmente
 ```
 
-O conteúdo de `dist/` pode ser hospedado em qualquer serviço de site estático
+Cada push na branch `main` publica o site no GitHub Pages automaticamente
+(`.github/workflows/deploy.yml`). Para ativar: **Settings → Pages → Source: GitHub Actions**.
+
+O conteúdo de `dist/` também pode ser hospedado em qualquer serviço de site estático
 (Netlify, Vercel, Hostinger, GitHub Pages etc.).
 
 ## Onde alterar cada coisa
